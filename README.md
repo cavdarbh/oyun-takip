@@ -40,6 +40,8 @@ oyun-takip/
 ├── vite.config.js
 └── README.md
 
+---
+
 Kurulum ve Calistirma
 Gereksinimler
 Node.js (v18.x veya uzeri onerilir)
