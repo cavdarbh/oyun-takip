@@ -1,6 +1,6 @@
-# Oyun Envanteri Takip Uygulamasi
+﻿# Oyun Envanteri Takip Uygulamasi
 
-Bu proje; React kütüphanesi, Vite derleme aracı ve Tailwind CSS kullanılarak geliştirilmiş, modüler mimariye ve tam CRUD (Create, Read, Update, Delete) işlevselliğine sahip bir ön yüz (frontend) web uygulamasıdır. Veri kalıcılığı tarayıcı yerel depolama alanı (LocalStorage API) üzerinden sağlanmaktadır.
+Bu proje; React kutuphanesi, Vite derleme araci ve Tailwind CSS kullanilarak gelistirilmis, moduler mimariye ve tam CRUD (Create, Read, Update, Delete) islevselligine sahip bir on yuz (frontend) web uygulamasidir. Veri kaliciligi tarayici yerel depolama alani (LocalStorage API) uzerinden saglanmaktadir.
 
 ---
 
@@ -19,22 +19,21 @@ Bu proje; React kütüphanesi, Vite derleme aracı ve Tailwind CSS kullanılarak
 
 ## Proje Dizin Yapisi
 
-```text
 oyun-takip/
-├── screenshots/              # Uygulama calisma anina ait ekran goruntuleri
+├── screenshots/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx        # Ust baslik ve istatistik gostergesi
-│   │   ├── OyunFormu.jsx     # Kayit ekleme ve duzenleme formu
-│   │   ├── OyunKarti.jsx     # Tekil kart gorunumu ve aksiyon butonlari
-│   │   └── OyunListesi.jsx   # Kartlarin listelendigi tasiyici bilesen
+│   │   ├── Navbar.jsx
+│   │   ├── OyunFormu.jsx
+│   │   ├── OyunKarti.jsx
+│   │   └── OyunListesi.jsx
 │   ├── data/
-│   │   └── varsayilanOyunlar.js # Ilk acilista yuklenen varsayilan veri seti
+│   │   └── varsayilanOyunlar.js
 │   ├── services/
-│   │   └── oyunServisi.js    # LocalStorage islemlerini yoneten CRUD servis katmani
-│   ├── App.jsx               # Ana uygulama tasiyicisi ve durum (state) yonetimi
-│   ├── index.css             # Tailwind direktifleri ve temel stiller
-│   └── main.jsx              # React baslatma ve render giris noktasi
+│   │   └── oyunServisi.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
 ├── index.html
 ├── package.json
 ├── vite.config.js
@@ -42,36 +41,45 @@ oyun-takip/
 
 ---
 
-Kurulum ve Calistirma
-Gereksinimler
-Node.js (v18.x veya uzeri onerilir)
+## Kurulum ve Calistirma
 
-npm (v9.x veya uzeri)
+### Gereksinimler
+- Node.js (v18.x veya uzeri onerilir)
+- npm (v9.x veya uzeri)
 
-1. Bagimliliklarin Yuklenmesi
+### 1. Bagimliliklarin Yuklenmesi
 Depo yerel ortama klonlandiktan sonra proje dizininde asagidaki komutu calistirin:
 
 npm install
 
-2. Gelistirme Sunucusunun Baslatilmasi
+### 2. Gelistirme Sunucusunun Baslatilmasi
 Uygulamayi yerel gelistirme modunda calistirmak icin:
 
 npm run dev
 
 Uygulama varsayilan olarak http://localhost:5173/ adresi uzerinde yayina baslayacaktir.
 
-3. Uretim (Production) Derlemesi
+### 3. Uretim (Production) Derlemesi
 Canli ortam cikti dosyalarini (dist/) olusturmak icin:
 
 npm run build
+
 ---
 
-Veri Modeli
+## Veri Modeli
+
 Uygulama kapsaminda tutulan tekil nesne yapisi asagidaki alanlardan olusur:
 
-Alan  | Veri Tipi | Zorunluluk | Aciklama
-id    |	 Number	 | Sistem Tarafından |	Benzersiz kayit numarasi (Zaman damgasi)
-ad	  |  String  | Evet	             |  Oyun basligi
-tur	  |  String	 | Evet	             |  Oyun kategorisi (RPG, Aksiyon, Macera vb.)
-fiyat |	 Number	 | Hayir	         |  ₺ cinsinden fiyat bilgisi
-puan  |  Number  | Hayir	         |  10 uzerinden degerlendirme puani
+| Alan | Veri Tipi | Zorunluluk | Aciklama |
+|---|---|---|---|
+| id | Number | Sistem Tarafindan | Benzersiz kayit numarasi (Zaman damgasi) |
+| ad | String | Evet | Oyun basligi |
+| tur | String | Evet | Oyun kategorisi (RPG, Aksiyon, Macera vb.) |
+| fiyat | Number | Hayir | ₺ cinsinden fiyat bilgisi |
+| puan | Number | Hayir | 10 uzerinden degerlendirme puani |
+
+---
+
+## Canli Yayin ve Dagitim
+
+Proje, Netlify uzerinde surekli entegrasyon (CI/CD) mekanizmasi ile yayina alinmistir.
