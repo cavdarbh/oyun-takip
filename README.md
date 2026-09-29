@@ -39,3 +39,37 @@ oyun-takip/
 ├── package.json
 ├── vite.config.js
 └── README.md
+
+Kurulum ve Calistirma
+Gereksinimler
+Node.js (v18.x veya uzeri onerilir)
+
+npm (v9.x veya uzeri)
+
+1. Bagimliliklarin Yuklenmesi
+Depo yerel ortama klonlandiktan sonra proje dizininde asagidaki komutu calistirin:
+
+npm install
+
+2. Gelistirme Sunucusunun Baslatilmasi
+Uygulamayi yerel gelistirme modunda calistirmak icin:
+
+npm run dev
+
+Uygulama varsayilan olarak http://localhost:5173/ adresi uzerinde yayina baslayacaktir.
+
+3. Uretim (Production) Derlemesi
+Canli ortam cikti dosyalarini (dist/) olusturmak icin:
+
+npm run build
+---
+
+Veri Modeli
+Uygulama kapsaminda tutulan tekil nesne yapisi asagidaki alanlardan olusur:
+
+Alan  | Veri Tipi | Zorunluluk | Aciklama
+id    |	 Number	 | Sistem Tarafından |	Benzersiz kayit numarasi (Zaman damgasi)
+ad	  |  String  | Evet	             |  Oyun basligi
+tur	  |  String	 | Evet	             |  Oyun kategorisi (RPG, Aksiyon, Macera vb.)
+fiyat |	 Number	 | Hayir	         |  ₺ cinsinden fiyat bilgisi
+puan  |  Number  | Hayir	         |  10 uzerinden degerlendirme puani
